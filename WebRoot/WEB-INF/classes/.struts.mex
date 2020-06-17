@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="hibernate-Criteria" location="165,45" size="805,490">
+    <action name="BookSave" location="65,47" size="150,62">
+      <result name="success" />
+      <result name="input" />
+    </action>
+    <action name="BookFindAll" location="65,187" size="150,62">
+      <result name="success" />
+      <result name="input" />
+    </action>
+    <action name="BookDelete" location="310,187" size="150,62">
+      <result name="success" />
+      <result name="input" />
+    </action>
+    <action name="BookFindOne" location="590,187" size="150,62">
+      <result name="success" />
+      <result name="input" />
+    </action>
+    <action name="BookUpdate" location="590,292" size="150,62">
+      <result name="success" />
+      <result name="input" />
+    </action>
+    <action name="BookQuery" location="590,397" size="150,62">
+      <result name="success" />
+      <result name="input" />
+    </action>
+  </package>
+  <webResource name="index.jsp" path="/index.jsp" location="10,65" size="150,55" />
+  <webResource name="list.jsp" path="list.jsp" location="640,590" size="150,55" />
+  <webResource name="faild.jsp" path="faild.jsp" location="1165,730" size="150,55" />
+  <webResource name="update.jsp" path="update.jsp" location="1022,205" size="150,55" />
+  <webResource name="index.jsp" path="index.jsp" location="1025,415" size="150,55" />
+</Struts2Diagram>
+
