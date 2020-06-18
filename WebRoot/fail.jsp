@@ -1,5 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -10,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'competition_create.jsp' starting page</title>
+    <title>My JSP 'fail.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -20,31 +19,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-
 	<style>
-		.title{
-  	  text-align:center;
-    }
-		.con{
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-
+		button{
+			font-size: 24px;
 		}
 	</style>
 
   </head>
   
   <body>
-		<div class="con">
-			<h2 class="title">赛事取消</h2>
-
-			<button>返回主页</button>
-		</div>
-	
-
-
-		
+	 <h2>你的请求失败</h2>
+	 <button onclick="window.location.href='index.jsp'" >返回首页</button>
   </body>
 </html>

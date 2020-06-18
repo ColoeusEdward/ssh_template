@@ -27,13 +27,47 @@
 			hibernate.hbm2ddl.auto=update
 		</value>
 	</property>
+	
+	<property name="mappingResources">
+    	<list>
+       		<value>po/cm/Competition.hbm.xml</value>
+     	</list>
+   	</property> 
 
      
   </bean>
   
+  <!-- 定义PO -->
+  <bean id="compPo" class="po.cm.Competition"></bean>
+  
+  <!-- DAO -->
+  <bean id="compDao" class="dao.cm.CompetitionDAOImpl" lazy-init="true">
+  	<property name="comp" ref="compPo"></property>
+  	<property name="sessionFactory" ref="sessionfactory"></property>
+  </bean>
+  
+  <!-- service -->
+  <bean id="compService" class="service.cm.CompetitionServiceImpl">
+  	<property name="comp" ref="compPo"></property>
+  	<property name="compDaoInt" ref="compDao"></property>
+  </bean>
+  
+  
   <!-- action类 -->
   <bean id="hello" class="hello.HelloAction" scope="prototype">
   
+  </bean>
+  
+  <bean id="compAddAction" class="action.cm.CompAddAction" scope="prototype">
+  	<property name="compService" ref="compService"></property>
+  </bean>
+  
+  <bean id="compFindAllAction" class="action.cm.CompFindAllAction" scope="prototype">
+  	<property name="compService" ref="compService"></property>
+  </bean>
+  
+  <bean id="compCancelAction" class="action.cm.CompCancelAction" scope="prototype">
+  	
   </bean>
 
 

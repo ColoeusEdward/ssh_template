@@ -45,16 +45,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="btn_con">
       <button onclick="window.location.href='competition_create.jsp'" >赛事添加</button>
 			<button onclick="window.location.href='competition_query.jsp'">赛事查询</button>
-			<button onclick="window.location.href='competition_update.jsp'">赛事更新</button>
-      <button onclick="window.location.href='competition_cancel.jsp'">赛事取消</button>
-      <button onclick="window.location.href='competition_referee.jsp'">裁判信息查询</button>
+			<button onclick="window.location.href='compFindAllAction.action'">全部赛事</button>
+			<button onclick="window.location.href='compCancelAction.action'">全部赛事t</button>
+      <button onclick="window.location.href='competition_referee.jsp'">所有裁判信息</button>
     </div>
     
-    <form action="hello.action" method="post">
-      <label for="name">Please enter your name</label><br/>
-      <input type="text" name="name"/>
-      <input type="submit" value="Say Hello"/>
-   </form>
   </body>
   
   <script>

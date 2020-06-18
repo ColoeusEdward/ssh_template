@@ -17,5 +17,26 @@
             method="execute">
             <result name="success">hw.jsp</result>
       </action>
+      
+       <action name="compAddAction" 
+            class="compAddAction" 
+            method="execute">
+            <result name="success">index.jsp</result>
+            <result name="fail">fail.jsp</result>
+      </action>
+      
+      <action name="compFindAllAction" 
+            class="compFindAllAction" 
+            method="execute">
+            <result name="success">competition_list.jsp</result>
+            <result name="fail">fail.jsp</result>
+      </action>
+      
+       <action name="compCancelAction" 
+            class="compCancelAction" 
+            method="execute">
+            <result name="success">competition_list.jsp</result>
+            <result name="fail">fail.jsp</result>
+      </action>
    </package>
 </struts>
