@@ -10,7 +10,7 @@
 	<property name="driverClass" value="com.mysql.jdbc.Driver"/>
 	<property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/gdougms"/>
 	<property name="user" value="root"/>
-	<property name="password" value="1392403914"/>
+	<property name="password" value="1103874618"/>
 	<property name="maxPoolSize" value="100"></property>
 	<property name="minPoolSize" value="1"/>
 	<property name="initialPoolSize" value="1"/>
@@ -29,6 +29,11 @@
 	</property>
 
      
+  </bean>
+  
+  <!-- action类 -->
+  <bean id="hello" class="hello.HelloAction" scope="prototype">
+  
   </bean>
 
 

@@ -6,9 +6,16 @@
 <struts>
 	<constant name="struts.enable.DynamicMethodInvocation"
 		value="true" />
-	<constant name="struts.devMode" value="false" />
+	<constant name="struts.devMode" value="true" />
 	
 	<include file="struts-default.xml" />  
 
-	
+	 <package name="helloworld" extends="struts-default" >
+     
+      <action name="hello" 
+            class="hello" 
+            method="execute">
+            <result name="success">hw.jsp</result>
+      </action>
+   </package>
 </struts>
