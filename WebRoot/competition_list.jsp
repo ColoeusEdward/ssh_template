@@ -41,12 +41,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<h2 class="title">查看全部赛事</h2>
       <table border="1" width="90%" align="center">
         <tr>
+        	 <td><h3><font color="red">赛事编号</font></h3></td>
              <td><h3><font color="red">赛事名称 </font></h3></td>
              <td><h3><font color="red">赛事简介</font></h3></td>
              <td><h3><font color="red">赛事负责人</font></h3></td>
              <td><h3><font color="red">器材名字</font></h3></td>
              <td><h3><font color="red">场地类型</font></h3></td>
-             <td><h3><font color="red">删除</font></h3></td>
+             <td><h3><font color="red">取消</font></h3></td>
              <td><h3><font color="red">更新</font></h3></td>
         </tr>
         <s:iterator value="#request.complist" id="b">
