@@ -67,7 +67,7 @@
   </bean>
   
   <bean id="compCancelAction" class="action.cm.CompCancelAction" scope="prototype">
-  	
+  	<property name="compService" ref="compService"></property>
   </bean>
 
 

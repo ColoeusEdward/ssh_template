@@ -58,7 +58,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
              <td>${b.holderName}</td>
              <td>${b.eqname}</td>
              <td>${b.filedType}</td>
-             <td><s:a href="BookDelete.action?bookPo.oid=%{#b.oid}" onclick="return del()">删除</s:a></td>
+             <td><s:a href="compCancelAction.action?comp.competitionId=%{#b.competitionId}" onclick="return del()">删除</s:a></td>
              <td><s:a href="BookFindOne.action?bookPo.oid=%{#b.oid}">更新</s:a> </td> 
         </tr>
         </s:iterator>
