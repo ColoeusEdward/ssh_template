@@ -49,7 +49,7 @@
   <!-- service -->
   <bean id="compService" class="service.cm.CompetitionServiceImpl">
   	<property name="comp" ref="compPo"></property>
-  	<property name="compDaoInt" ref="compDao"></property>
+  	<property name="compDaoImpl" ref="compDao"></property>
   </bean>
   
   

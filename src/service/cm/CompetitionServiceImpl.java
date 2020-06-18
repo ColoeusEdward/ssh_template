@@ -8,7 +8,8 @@ import dao.cm.*;
 
 public class CompetitionServiceImpl implements CompetitionServiceInt {
 	private Competition comp;
-	private CompetitionDAOInt compDaoInt;
+//	private CompetitionDAOInt compDaoInt;
+	private CompetitionDAOImpl compDaoImpl;
 	
 
 	public Competition getComp() {
@@ -19,12 +20,20 @@ public class CompetitionServiceImpl implements CompetitionServiceInt {
 		this.comp = comp;
 	}
 
-	public CompetitionDAOInt getCompDaoInt() {
-		return compDaoInt;
+//	public CompetitionDAOInt getCompDaoInt() {
+//		return compDaoInt;
+//	}
+//
+//	public void setCompDaoInt(CompetitionDAOInt compDaoInt) {
+//		this.compDaoInt = compDaoInt;
+//	}
+
+	public CompetitionDAOImpl getCompDaoImpl() {
+		return compDaoImpl;
 	}
 
-	public void setCompDaoInt(CompetitionDAOInt compDaoInt) {
-		this.compDaoInt = compDaoInt;
+	public void setCompDaoImpl(CompetitionDAOImpl compDaoImpl) {
+		this.compDaoImpl = compDaoImpl;
 	}
 
 	@Override
@@ -36,7 +45,7 @@ public class CompetitionServiceImpl implements CompetitionServiceInt {
 		comp.setFiledType(compVo.getFiledType());
 		comp.setHolderName(compVo.getHolderName());
 		try{
-			compDaoInt.saveComp(comp);
+			compDaoImpl.saveComp(comp);
 		}catch(Exception e){
 			e.printStackTrace();
 		}
@@ -47,7 +56,7 @@ public class CompetitionServiceImpl implements CompetitionServiceInt {
 		// TODO Auto-generated method stub
 		List<Competition> result = new ArrayList<Competition>();
 		try{
-			result = compDaoInt.findAllComp();
+			result = compDaoImpl.findAllComp();
 		}catch(Exception e){
 			e.printStackTrace();
 		}
@@ -58,7 +67,7 @@ public class CompetitionServiceImpl implements CompetitionServiceInt {
 	public void deleteComp(Competition comp) {
 		// TODO Auto-generated method stub
 		try{
-			compDaoInt.deleteByOid(comp.getCompetitionId());
+			compDaoImpl.deleteByOid(comp.getCompetitionId());
 		}catch(Exception e){
 			e.printStackTrace();
 		}
@@ -69,7 +78,7 @@ public class CompetitionServiceImpl implements CompetitionServiceInt {
 	public void updateComp(Competition comp) {
 		// TODO Auto-generated method stub
 		try{
-			compDaoInt.updateComp(comp);
+			compDaoImpl.updateComp(comp);
 		}catch(Exception e){
 			e.printStackTrace();
 		}
@@ -83,7 +92,7 @@ public class CompetitionServiceImpl implements CompetitionServiceInt {
 		// TODO Auto-generated method stub
 		Competition compOne = new Competition();
 		try{
-			compOne = compDaoInt.getByOid(comp.getCompetitionId());
+			compOne = compDaoImpl.getByOid(comp.getCompetitionId());
 		}catch(Exception e){
 			e.printStackTrace();
 		}
@@ -98,7 +107,7 @@ public class CompetitionServiceImpl implements CompetitionServiceInt {
 		compOne.setCompetitionIntroduction(compVo.getCompInfo());
 		List<Competition> result = new ArrayList<Competition>();
 		try{
-			result = compDaoInt.queryComp(compOne);
+			result = compDaoImpl.queryComp(compOne);
 		}catch(Exception e){
 			e.printStackTrace();
 		}

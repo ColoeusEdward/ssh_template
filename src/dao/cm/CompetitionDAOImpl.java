@@ -32,7 +32,8 @@ public class CompetitionDAOImpl extends HibernateDaoSupport implements Competiti
 	public List<Competition> findAllComp() throws Exception {
 		// TODO Auto-generated method stub
 		List<Competition> result = new ArrayList<Competition>();
-		result = this.getHibernateTemplate().find("from competition");
+		String f = "from Competition";
+		result = this.getHibernateTemplate().find(f);
 		return result;
 	}
 
