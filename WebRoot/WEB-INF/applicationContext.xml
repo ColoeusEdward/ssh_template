@@ -69,6 +69,14 @@
   <bean id="compCancelAction" class="action.cm.CompCancelAction" scope="prototype">
   	<property name="compService" ref="compService"></property>
   </bean>
+  
+  <bean id="compUpdateAction" class="action.cm.CompUpdateAction" scope="prototype">
+  	<property name="compService" ref="compService"></property>
+  </bean>
+  
+  <bean id="compFindOneAction" class="action.cm.CompFindOneAction" scope="prototype">
+  	<property name="compService" ref="compService"></property>
+  </bean>
 
 
 </beans>
