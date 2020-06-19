@@ -9,5 +9,5 @@ public interface CompetitionServiceInt {
 	public void deleteComp(Competition comp);
 	public void updateComp(Competition comp);
 	public Competition findOneComp(Competition comp);
-	public List<Competition> queryComp(CompetitionVO compVo);
+//	public List<Competition> queryComp(CompetitionVO compVo);
 }

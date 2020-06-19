@@ -78,5 +78,8 @@
   	<property name="compService" ref="compService"></property>
   </bean>
 
+  <bean id="compQueryAction" class="action.cm.CompQueryAction" scope="prototype">
+  	<property name="compService" ref="compService"></property>
+  </bean>
 
 </beans>

@@ -25,12 +25,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		.title{
   	  text-align:center;
     }
+		.con{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
 	</style>
 
   </head>
   
   <body>
-		<h2 class="title">赛事查询</h2>
+		<div class="con">
+			<h2 class="title">赛事查询</h2>
+
+		<s:form action="compQueryAction.action">
+      <s:textfield name="compVo.CompName" label="赛事名称"></s:textfield>
+			<s:textfield name="compVo.CompInfo" label="赛事简介"></s:textfield>
+			<s:textfield name="compVo.HolderName" label="赛事负责人"></s:textfield>
+      <s:submit align="center" value="查询"></s:submit>
+    </s:form>
+		</div>
+		
 		
   </body>
 </html>

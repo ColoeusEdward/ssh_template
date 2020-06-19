@@ -25,7 +25,7 @@ public class CompFindOneAction extends ActionSupport {
 	{
 //		bookService = new BookServiceImpl();
 //		compService.saveComp(compVo);
-		compService.findOneComp(comp);
+		comp = compService.findOneComp(comp);
 		System.out.print("sss");
 		return "success";
 	}

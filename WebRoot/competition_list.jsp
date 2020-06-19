@@ -23,32 +23,83 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 	<style>
 		.title{
+      font-size: 38px;
   	  text-align:center;
+			margin-bottom: 30px;
     }
 		.con{
+      height: 100%;
       width: 100%;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 		}
+    table
+        {
+
+            border-collapse: collapse;
+            margin: 50px auto;
+            text-align: center;
+        }
+        table td, table th
+        {
+            border: 1px solid #cad9ea;
+            color: #666;
+            height: 40px;
+        }
+        table thead th
+        {
+            background-color: #CCE8EB;
+            width: 100px;
+        }
+        table tr:nth-child(odd)
+        {
+            background: #fff;
+        }
+        table tr:nth-child(even)
+        {
+            background: #F5FAFA;
+        }
+        button{
+          transition: all 0.3s ease;
+	    margin-left: 30px;
+	    font-size:20px;
+	    background-color: #fff;
+			padding: 18px 40px;
+			border-radius: 10px;
+      margin-top: 30px;
+        }
+
+        .divide_line{
+			margin:0 auto;
+			width: 80%;
+			border-top: 2px solid #929292;
+		}
+    button:hover,.button:hover{
+			background-color: black;
+			color: #fff;
+			transition: all 0.3s ease;
+		}
+
 	</style>
 
   </head>
   
   <body>
 		<div class="con">
-			<h2 class="title">查看全部赛事</h2>
+      <h2 class="title">查看全部赛事</h2>
+      <div class="divide_line"></div>
       <table border="1" width="90%" align="center">
         <tr>
-        	 <td><h3><font color="red">赛事编号</font></h3></td>
-             <td><h3><font color="red">赛事名称 </font></h3></td>
-             <td><h3><font color="red">赛事简介</font></h3></td>
-             <td><h3><font color="red">赛事负责人</font></h3></td>
-             <td><h3><font color="red">器材名字</font></h3></td>
-             <td><h3><font color="red">场地类型</font></h3></td>
-             <td><h3><font color="red">取消</font></h3></td>
-             <td><h3><font color="red">更新</font></h3></td>
+        	 <td><h3>赛事编号</h3></td>
+             <td><h3>赛事名称 </h3></td>
+             <td><h3>赛事简介</h3></td>
+             <td><h3>赛事负责人</h3></td>
+             <td><h3>器材名字</h3></td>
+             <td><h3>场地类型</h3></td>
+             <td><h3>取消</h3></td>
+             <td><h3>更新</h3></td>
         </tr>
         <s:iterator value="#request.complist" id="b">
         <tr>
@@ -58,7 +109,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
              <td>${b.holderName}</td>
              <td>${b.eqname}</td>
              <td>${b.filedType}</td>
-             <td><s:a href="compCancelAction.action?comp.competitionId=%{#b.competitionId}" onclick="return del()">删除</s:a></td>
+             <td><s:a href="compCancelAction.action?comp.competitionId=%{#b.competitionId}" onclick="return del()">取消</s:a></td>
              <td><s:a href="compFindOneAction.action?comp.competitionId=%{#b.competitionId}">更新</s:a> </td> 
         </tr>
         </s:iterator>

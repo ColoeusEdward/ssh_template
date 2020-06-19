@@ -56,16 +56,6 @@ public class CompetitionDAOImpl extends HibernateDaoSupport implements Competiti
 		this.getHibernateTemplate().update(comp);
 	}
 
-	@Override
-	@SuppressWarnings("unchecked")
-	public List<Competition> queryComp(Competition comp) throws Exception {
-		// TODO Auto-generated method stub
-		List<Competition> Q_result = new ArrayList<Competition>();
-		Q_result = this.getSession().createCriteria(Competition.class).
-				add(Example.create(comp).ignoreCase().excludeNone().enableLike(MatchMode.ANYWHERE)).list();
-		
-		return Q_result;
-	}
 	
 	
 

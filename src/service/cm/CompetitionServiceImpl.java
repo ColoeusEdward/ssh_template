@@ -93,25 +93,27 @@ public class CompetitionServiceImpl implements CompetitionServiceInt {
 		Competition compOne = new Competition();
 		try{
 			compOne = compDaoImpl.getByOid(comp.getCompetitionId());
+			System.out.println(compOne.getCompetitionName());
 		}catch(Exception e){
 			e.printStackTrace();
 		}
 		return compOne;
 	}
 
-	@Override
-	public List<Competition> queryComp(CompetitionVO compVo) {
-		// TODO Auto-generated method stub
-		Competition compOne = new Competition();
-		compOne.setCompetitionName(compVo.getCompName());
-		compOne.setCompetitionIntroduction(compVo.getCompInfo());
-		List<Competition> result = new ArrayList<Competition>();
-		try{
-			result = compDaoImpl.queryComp(compOne);
-		}catch(Exception e){
-			e.printStackTrace();
-		}
-		return result;
-	}
+//	@Override
+//	public List<Competition> queryComp(CompetitionVO compVo) {
+//		// TODO Auto-generated method stub
+//		Competition compOne = new Competition();
+//		compOne.setCompetitionName(compVo.getCompName());
+//		compOne.setCompetitionIntroduction(compVo.getCompInfo());
+//		compOne.setHolderName(compVo.getHolderName());
+//		List<Competition> result = new ArrayList<Competition>();
+//		try{
+//			result = compDaoImpl.queryComp(compOne);
+//		}catch(Exception e){
+//			e.printStackTrace();
+//		}
+//		return result;
+//	}
 
 }

@@ -23,13 +23,49 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 	<style>
 		.title{
+			font-size: 38px;
   	  text-align:center;
+			margin-bottom: 30px;
     }
+		body{
+			height: 100%;
+		}
 		.con{
+			height: 100%;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+		}
+
+		.divide_line{
+			margin:0 auto;
+			width: 80%;
+			border-top: 2px solid #929292;
+		}
+		.form{
+
+		}
+		.input{
+			margin: 20px 0;
+			font-size: 28px;
+			border: none;
+			border-bottom: 1px solid #8a8989;
+			outline: none;
+		}
+		button,.button{
+			transition: all 0.3s ease;
+	    margin-left: 30px;
+	    font-size:20px;
+	    background-color: #fff;
+			padding: 18px 40px;
+			border-radius: 10px;
+		}
+
+		button:hover,.button:hover{
+			background-color: black;
+			color: #fff;
+			transition: all 0.3s ease;
 		}
 	</style>
 
@@ -37,16 +73,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
 		<div class="con">
-			<h2 class="title">赛事添加</h2>
-		
-	    <s:form action="compAddAction.action">
-	      <s:textfield name="compVo.CompName" label="赛事名称"></s:textfield>
-				<s:textfield name="compVo.CompInfo" label="赛事简介"></s:textfield>
-				<s:textfield name="compVo.HolderName" label="赛事负责人"></s:textfield>
-				<s:textfield name="compVo.EQName" label="器材名字"></s:textfield>
-				<s:textfield name="compVo.FiledType" label="场地类型"></s:textfield>
+			<div class="title">赛事添加</div>
+			<div class="divide_line"></div>
+
+	    <s:form action="compAddAction.action" cssClass="form">
+	      <s:textfield name="compVo.CompName" label="赛事名称" cssClass="input"></s:textfield>
+				<s:textfield name="compVo.CompInfo" label="赛事简介" cssClass="input"></s:textfield>
+				<s:textfield name="compVo.HolderName" label="赛事负责人" cssClass="input"></s:textfield>
+				<s:textfield name="compVo.EQName" label="器材名字" cssClass="input"></s:textfield>
+				<s:textfield name="compVo.FiledType" label="场地类型" cssClass="input"></s:textfield>
 				
-	      <s:submit align="center" value="添加赛事"></s:submit>
+	      <s:submit align="center" value="添加赛事" cssClass="button"></s:submit>
 			</s:form>
 			
 			<button onclick="window.location.href='index.jsp'" >返回首页</button>
